@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/cypress run",
+    "headTest": "npm run test --  --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "mochaReportTest": "npm run test --reporter mochawesome",
+    "recordDashboardTest": "npm run test -- --record --key 2b325419-3800-40ef-b839-76cf72ac3d2e --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.8.0"
+    "cypress": "^13.8.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
